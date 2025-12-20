@@ -2,7 +2,7 @@ spring:
   application:
     name: Prowork
   datasource:
-    url: jdbc:mysql://db:3307/prowork_db?serverTimezone=UTC&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3307/prowork_db?serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: 12345678@Abc
     driver-class-name: com.mysql.cj.jdbc.Driver
