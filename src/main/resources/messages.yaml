@@ -1,0 +1,4 @@
+common:
+  required={0} is required
+  min_characters={0} must contain at least {1} characters
+  max_characters={0} cannot exceed {1} characters
