@@ -15,17 +15,5 @@ public class Validations {
     //region Message
     public static final String PASSWORD_RULES = "Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character";
     public static final String CONFIRM_PASSWORD_RULES = "Confirm password does not match the entered password";
-
-    public static String required(String fieldName) {
-        return fieldName + " is required";
-    }
-
-    public static String maxCharacters(String fieldName, int numberCharacters) {
-        return fieldName + " cannot exceed " + numberCharacters + " characters";
-    }
-
-    public static String minCharacters(String fieldName, int numberCharacters) {
-        return fieldName + " must contain at least " + numberCharacters + " characters";
-    }
     //endregion
 }
