@@ -27,7 +27,7 @@ public class RegistrationRequest {
             message = "{common.min_characters}"
     )
     @Size(
-            min = Validations.MAX_PASSWORD_CHARACTERS,
+            max = Validations.MAX_PASSWORD_CHARACTERS,
             message = "{common.max_characters}"
     )
     @Pattern(

@@ -1,6 +1,7 @@
 package com.hiepnn.prowork.controllers;
 
 import com.hiepnn.prowork.dtos.RegistrationRequest;
+import com.hiepnn.prowork.dtos.ServiceResponse;
 import com.hiepnn.prowork.services.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,12 +19,8 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(@Validated @RequestBody RegistrationRequest request) {
-        try {
-            authService.register(request);
-            return new ResponseEntity<>("Registration successful", HttpStatus.CREATED);
-        } catch (Exception ex) {
-            return new ResponseEntity<>("Registration error: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    public ResponseEntity<ServiceResponse<String>> register(@Validated @RequestBody RegistrationRequest request) {
+        ServiceResponse<String> response = authService.register(request);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }
